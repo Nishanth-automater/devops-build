@@ -4,8 +4,8 @@ set -e
 BRANCH=${1:-dev}
 
 IMAGE_NAME="react-static-app"
-DEV_IMAGE="nishanth420/capstone-dev:$BRANCH"
-PROD_IMAGE="nishanth420/capstone-prod:$BRANCH"
+DEV_IMAGE="nishanth420/capstone-dev:latest"
+PROD_IMAGE="nishanth420/capstone-prod:latest"
 
 echo "Building Docker image..."
 docker build -t $IMAGE_NAME:latest .
