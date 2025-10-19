@@ -57,6 +57,8 @@ pipeline {
                          fi
                          cd /home/ec2-user/devops-build &&
                          git fetch origin &&
+                         git reset --hard HEAD &&
+                         git clean -fd &&
                          git checkout ${env.BRANCH_NAME} &&
                          git pull origin ${env.BRANCH_NAME} &&
                          chmod +x deploy.sh &&
