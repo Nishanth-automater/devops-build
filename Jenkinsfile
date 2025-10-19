@@ -68,7 +68,7 @@ pipeline {
             echo "✅ Deployment completed successfully for branch ${env.BRANCH_NAME}!"
         }
         failure {
-            echo "❌ Pipeline failed. Check logs."
+            echo "❌ Pipeline failed. Check the logs."
         }
     }
 }
