@@ -52,6 +52,9 @@ pipeline {
                 sshagent(['ec2-ssh-key']) {
                     sh """
                     ssh -o StrictHostKeyChecking=no $EC2_HOST '
+                        if [ ! -d /home/ec2-user/devops-build ]; then
+                            git clone https://github.com/Nishanth-automater/devops-build.git /home/ec2-user/devops-build;
+                        fi
                         cd /home/ec2-user/devops-build &&
                         git pull &&
                         chmod +x deploy.sh &&
