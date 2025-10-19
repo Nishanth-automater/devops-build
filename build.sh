@@ -20,5 +20,5 @@ else
     echo "Unknown branch '$BRANCH'. Tagging as latest locally."
 fi
 
-echo "Build complete..."
+echo "Build complete....."
 
